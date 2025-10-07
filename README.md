@@ -4,7 +4,9 @@
 Hello World!
 
 ### W2
-Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
+1.Because the color are float and not whole number. There is a smooth transition between 2 colors.
+2.The bounce counts how many times has bounced and it is a whole number so it is an int.
+3.That means the variable is working as a float. The error was with variable wasn't used correct. There was a reference issue in the code.
 
 ## Open-Source Assets
 ### W1
