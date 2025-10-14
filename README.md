@@ -9,7 +9,7 @@ Hello World!
 3.That means the variable is working as a float. The error was with variable wasn't used correct. There was a reference issue in the code.
 
 ### W3
-
+1. input: float playerhittime, float beattime output: bool true=hit false=miss
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
