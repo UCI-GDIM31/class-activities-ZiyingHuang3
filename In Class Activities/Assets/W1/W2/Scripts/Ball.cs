@@ -96,7 +96,7 @@ public class Ball : MonoBehaviour
         // Don't worry about how it works yet; we'll learn about this later :)
         Color newColor = new Color(r, g, b);
         _spriteRenderer.color = newColor;
-
+        _spriteRenderer.color = new Color(r,g,b); 
         // This line prints the value of your new color to the Console window.
         // We'll talk more about how this line works next week also :)
         Debug.Log(newColor);
