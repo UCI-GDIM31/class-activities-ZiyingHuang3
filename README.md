@@ -16,6 +16,9 @@ table#4
 line 5: SerializeField make this variable visible and it is private. Float is a number like 1.0. _moveSpeed is how fast the cat moves and it is 1.0f
 line 22: This float variable called translation and it is a player's input on Vertical axis. This multiplies cat's speed multiplies Time_deltatime makes this frame by frame at the same speed
 line 25: The transform of the game object and translate(x, y, z) make it moves forward and backward.
+
+1.We put Rigidbodies to cat and ball. Trigger the goal collider on
+2.We just tried to tigger it on and off to see what happens. We found out that the goal need to trigger the collider on.
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 

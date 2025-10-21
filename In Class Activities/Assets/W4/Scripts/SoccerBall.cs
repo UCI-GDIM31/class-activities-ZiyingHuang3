@@ -7,6 +7,8 @@ public class SoccerBall : MonoBehaviour
     [SerializeField] private TMP_Text _pointsText;
     [SerializeField] private TMP_Text _timeText;
     [SerializeField] private ParticleSystem _goalVFX;
+    private int points = 0;
+    private float timer = 0;   
 
     // STEP 1 -----------------------------------------------------------------
     // The OnTriggerEnter method is a collision method called by Unity that
@@ -21,8 +23,8 @@ public class SoccerBall : MonoBehaviour
     //
     // Also, uncomment and FIX the Debug.Log line.
 
-    //private ?? ??
-    //{
+    private void OnTriggerEnter(Collider other)
+    {
         // finish STEP 1 by uncommenting and fixing the below line!
         //Debug.Log(SoccerBall detected a collision with a trigger collider!);
 
@@ -30,13 +32,17 @@ public class SoccerBall : MonoBehaviour
         // Write an IF STATEMENT to check if the game object we collided with
         //      has the tag "Goal".
         // Refer to the slides for an example of how to check this :)
-        //
+        if (other.tag == "Goal") 
+        {
+            MadeGoal();
+            Debug.Log("SoccerBall detected a collision with a trigger collider!");
+        }
         // Then, move your Debug.Log() statement so that it's only called if
         //      the colliding object has the "Goal" tag.
 
 
         // STEP 2 -------------------------------------------------------------
-    //}
+    }
 
     // STEP 1 -----------------------------------------------------------------
 
@@ -45,21 +51,32 @@ public class SoccerBall : MonoBehaviour
     // Next, we're going to make a method named MadeGoal to call if the
     //      SoccerBall collided with an object tagged "Goal".
     // MadeGoal RETURNS NOTHING, and has NO INPUT.
-    // 
+    private void MadeGoal()
+    {
+        Debug.Log("SoccerBall detected a collision with a trigger collider!");
+
+        _goalVFX.Play();
+
+        points++;
+
+        timer = 0;
+
+        _pointsText.text = "Points " + points;
+    }
     // Once you've created MadeGoal,
     //      move your Debug.Log() statement into MadeGoal, and
     //      call MadeGoal from inside your if statement in OnTriggerEnter.
-    
-        // STEP 4 -------------------------------------------------------------
-        // _goalVFX is a ParticleSystem, a Component for creating VFX.
-        // ParticleSystem has a method named Play() that displays the VFX:
-        // https://docs.unity3d.com/6000.0/Documentation/ScriptReference/ParticleSystem.Play.html 
-        //
-        // Call Play on _goalVFX.
 
-        // STEP 4 -------------------------------------------------------------
-    
-    
+    // STEP 4 -------------------------------------------------------------
+    // _goalVFX is a ParticleSystem, a Component for creating VFX.
+    // ParticleSystem has a method named Play() that displays the VFX:
+    // https://docs.unity3d.com/6000.0/Documentation/ScriptReference/ParticleSystem.Play.html 
+
+    // Call Play on _goalVFX.
+
+    // STEP 4 -------------------------------------------------------------
+
+
     // STEP 3 -----------------------------------------------------------------
 
 
@@ -76,9 +93,10 @@ public class SoccerBall : MonoBehaviour
     // You will need to:
     //      1. Create a new member variable to keep track of the points.
     //      2. Use your MadeGoal method to update the points and text.
-    //
+
+
     // STEP 5 -----------------------------------------------------------------
-    
+
 
     // STEP 6 -----------------------------------------------------------------
     // Like the last step, these flags do NOT show you where to put all of the
@@ -88,7 +106,11 @@ public class SoccerBall : MonoBehaviour
     //      player scored a goal, and update _timeText with that time.
     // Your time variable should increase EVERY FRAME with how much TIME has 
     //      passed, and reset to ZERO when we MAKE A GOAL.
-    //
+    private void Update()
+    {
+        timer +=  Time.deltaTime;
+        _timeText.text ="time since last goal" + timer.ToString();
+    }
     // You will need to:
     //      1. Use a Unity method to increase your time variable every frame
     //              and update _timeText with the new time.
