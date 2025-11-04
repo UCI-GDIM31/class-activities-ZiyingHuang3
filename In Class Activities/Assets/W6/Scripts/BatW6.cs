@@ -8,6 +8,7 @@ public class BatW6 : MonoBehaviour
     
     private void Update()
     {
+        if (_cat == null) return;
         transform.position = Vector3.MoveTowards(transform.position, _cat.position,_speed* Time.deltaTime);
     }
     public void Chasecat(Transform player)
