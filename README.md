@@ -22,6 +22,9 @@ line 25: The transform of the game object and translate(x, y, z) make it moves f
 
 ### W5
 1.How Vector3 makes gameobject to move? A:Vector3 is (x,y,z) of a point. We can assign a new position by using transform.position to change its position
+
+### W6
+For BatW6, I plan to write the speed first which is private float. I need the cat's position so I need to put down Transform. It calls every frame so I need to use Update() and Vector3.MoveTowards to make bats to chase the cat. Make bats to stop chasing, I need to use eable=false
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
