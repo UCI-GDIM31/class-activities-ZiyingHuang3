@@ -25,6 +25,10 @@ line 25: The transform of the game object and translate(x, y, z) make it moves f
 
 ### W6
 For BatW6, I plan to write the speed first which is private float. I need the cat's position so I need to put down Transform. It calls every frame so I need to use Update() and Vector3.MoveTowards to make bats to chase the cat. Make bats to stop chasing, I need to use eable=false
+
+### W7
+https://docs.google.com/document/d/13nVwuWGt47ZJIsqeRlTBOlD78hPmrMBLpVFdvgc_doA/edit?tab=t.0
+I did some physics, UI and enviroment. I wrote some component that we need for this game and mostly 2D collider and 2D Ridgibody.The animal need to use the world's forwrd axis no its own axis.
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
