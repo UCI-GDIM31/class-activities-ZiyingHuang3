@@ -29,6 +29,9 @@ For BatW6, I plan to write the speed first which is private float. I need the ca
 ### W7
 https://docs.google.com/document/d/13nVwuWGt47ZJIsqeRlTBOlD78hPmrMBLpVFdvgc_doA/edit?tab=t.0
 I did some physics, UI and enviroment. I wrote some component that we need for this game and mostly 2D collider and 2D Ridgibody.The animal need to use the world's forwrd axis no its own axis.
+
+### W8
+https://docs.google.com/document/d/1n_KTFb7RKX5ALRUG1OJTQXDijw0JehiChVh2Bav-zpk/edit?tab=t.0
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
